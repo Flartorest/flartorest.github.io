@@ -1,12 +1,38 @@
-body {
-  background-color: #0F0505 !important; /* Warna latar belakang halaman */
-  color: #EAE2E2 !important;
+:root {
+  --text: rgb(247, 247, 247);
+  --background: #010101;
+  --primary: 240, 177, 246;
+  --secondary: 40, 50, 52;
+  --accent: rgb(247, 247, 247);
 }
-
+a {
+  color: rgb(var(--primary));
+  text-decoration: none;
+}
+body {
+  background-color: var(--background);
+  background-image: radial-gradient(
+    rgba(var(--primary), 0.4) 1px,
+    transparent 0
+  );
+  background-size: 100px 100px;
+  color: var(--text);
+}
+.bg-dark {
+  background-color: var(
+    --background
+  ) !important; /* Warna latar belakang halaman */
+}
+h2 {
+  font-weight: bolder;
+}
 body::-webkit-scrollbar {
   width: 0em; /* Lebar scrollbar */
 }
-
+.h1 {
+  font-size: 50px !important;
+  font-weight: bolder;
+}
 body::-webkit-scrollbar-thumb {
   background-color: darkgray; /* Warna thumb (bagian yang dapat digerakkan) scrollbar */
 }
@@ -15,43 +41,64 @@ body::-webkit-scrollbar-track {
   background-color: #343a40; /* Warna track (bagian yang tidak dapat digerakkan) scrollbar */
 }
 
-    .jumbotron {
-      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://w.wallhaven.cc/full/kx/wallhaven-kxkzdm.png');
-      background-size: cover;
-      background-position: top;
-      color: white; /* Warna teks di dalam jumbotron */
-      text-align: center;
-      padding: 100px 20px; /* Sesuaikan dengan kebutuhan Anda */
-    }
-    .carousel {
-      max-width: 100%; /* Sesuaikan lebar carousel dengan kebutuhan Anda */
-      height: 300px !important;
-      object-fit: cover;
-    }
+.jumbotron {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://cdn.discordapp.com/attachments/1083084924417998930/1235529839428239373/image.png?ex=66413a94&is=663fe914&hm=107769606ad249d01d5d920388d91928c4c53a67c846071b35e52f50fa392370&");
+  background-size: cover;
+  background-position: top;
+  color: white; /* Warna teks di dalam jumbotron */
+  text-align: center;
+  padding: 200px 20px; /* Sesuaikan dengan kebutuhan Anda */
+}
+.carousel {
+  max-width: 100%; /* Sesuaikan lebar carousel dengan kebutuhan Anda */
+  height: 300px !important;
+  object-fit: cover;
+}
+
+.btn-primary {
+  background-color: rgb(var(--primary));
+  border: rgb(var(--primary));
+  color: black;
+}
+.btn-primary:hover {
+  background-color: rgba(var(--primary), 0.8);
+  border: rgb(var(--primary));
+}
+.btn {
+  font-size: larger;
+}
+.btn-outline-danger {
+  border: 2px var(--accent) solid;
+  color: white;
+}
+.btn-outline-danger:hover {
+  border: 2px var(--accent) solid;
+  background-color: var(--accent);
+  color: black;
+}
 #Name {
-  font-size: clamp(3rem, 10vw, 10rem);
-      font-family: "Space Mono", monospace;
-        transition: background 0.3s, color 0.3s, border-radius 0.3s;
-      background: -webkit-linear-gradient(#8A2387, #F27121);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-    }
+  font-size: clamp(2rem, 6vw, 6rem);
+  transition:
+    background 0.3s,
+    color 0.3s,
+    border-radius 0.3s;
+}
+h3 {
+  font-weight: bolder;
+}
 #Name {
-  position: relative;
-  top: -20px; /* Sesuaikan nilai top untuk menyesuaikan posisinya */
   transition: top 0.3s ease; /* Animasi pergerakan saat dihover */
 }
 #Name:hover {
-  top: -50px; /* Nilai top saat dihover */
+  top: -30px; /* Nilai top saat dihover */
 }
 
-img, carousel{
+img,
+carousel {
   border-radius: 12px;
 }
-.fullsize-img {
-  width: 100%;
-  margin-bottom: 10px;
-}
+
 body {
   display: flex;
   flex-direction: column;
@@ -73,20 +120,16 @@ footer {
   grid-template-rows: auto 1fr auto; /* Bagian header, konten, dan footer */
   min-height: 100vh; /* Set kontainer setidaknya setinggi layar */
 }
-/* CSS sebelum media query */
-.fullsize-img {
-  width: 100%;
-}
 
 /* Menambahkan media query untuk layar vertikal */
-@media (max-width: 768px) { /* Ubah nilai sesuai kebutuhan */
+@media (max-width: 768px) {
+  /* Ubah nilai sesuai kebutuhan */
   .carousel-item img {
     max-height: 250px; /* Atau nilai yang sesuai */
     /* Atur properti lain jika diperlukan */
   }
 }
 
-}
 .carousel-item img {
   max-height: 60vh; /* Atur tinggi maksimum gambar */
   width: auto;
@@ -105,7 +148,8 @@ footer {
   margin-left: auto;
   margin-right: auto;
 }
-@media (max-width: 576px) { /* Ubah nilai sesuai kebutuhan */
+@media (max-width: 576px) {
+  /* Ubah nilai sesuai kebutuhan */
   .carousel-item img {
     max-height: 250px; /* Sesuaikan tinggi gambar untuk layar vertikal */
     /* Sesuaikan properti lain jika diperlukan */
@@ -118,15 +162,10 @@ footer {
   border-radius: 12px; /* Menambahkan sudut lengkung 12px */
 }
 img {
-  margin-bottom: 10%; 
-  border-radius: 12px; 
-  object-fit: scale-down; 
+  border-radius: 12px;
+  object-fit: scale-down;
   object-position: center;
   max-height: 100%;
-}
-@font-face {
-  font-family: "texgyreadventor-italic"; /* Ganti dengan nama font yang Anda inginkan */
-  src: url('texgyreadventor-italic.otf') format('truetype'); /* Sesuaikan jalur dan format file font Anda */
 }
 
 /* Tambahkan ini ke dalam file styles.css */
