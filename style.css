@@ -61,7 +61,7 @@ body::-webkit-scrollbar-track {
   border: rgb(var(--primary));
   color: black;
 }
-.btn-primary:hover:focus {
+.btn-primary:hover {
   background-color: rgba(var(--primary), 0.8);
   border: rgb(var(--primary));
 }
@@ -72,7 +72,7 @@ body::-webkit-scrollbar-track {
   border: 2px var(--accent) solid;
   color: white;
 }
-.btn-outline-danger:hover:focus {
+.btn-outline-danger:hover {
   border: 2px var(--accent) solid;
   background-color: var(--accent);
   color: black;
