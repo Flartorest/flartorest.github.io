@@ -56,7 +56,7 @@ body::-webkit-scrollbar-track {
   object-fit: cover;
 }
 
-.btn-primary {
+.btn-primary:hover {
   background-color: rgb(var(--primary));
   border: rgb(var(--primary));
   color: black;
@@ -68,7 +68,7 @@ body::-webkit-scrollbar-track {
 .btn {
   font-size: larger;
 }
-.btn-outline-danger {
+.btn-outline-danger:hover {
   border: 2px var(--accent) solid;
   color: white;
 }
