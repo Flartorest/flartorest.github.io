@@ -69,6 +69,19 @@ body::-webkit-scrollbar-track {
   transform: scale(1.05);
 }
 
+/* Agar tombol Discord tidak berubah warna saat dipencet */
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: rgb(var(--primary)) !important;
+  border-color: rgb(var(--primary)) !important;
+  color: black !important;
+  box-shadow: none !important;
+}
+
+.btn-primary:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
 .btn {
   font-size: larger;
 }
@@ -84,6 +97,12 @@ body::-webkit-scrollbar-track {
   background-color: var(--accent);
   color: black;
   transform: scale(1.05);
+}
+
+/* Hilangkan stroke merah pada tombol Instagram */
+.btn-outline-danger:focus {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 #Name {
