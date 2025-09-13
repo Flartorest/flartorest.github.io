@@ -2,7 +2,7 @@
   --text: rgb(247, 247, 247);
   --background: #010101;
   --primary: 240, 177, 246;
-  --secondary: 40, 50, 52;
+  --secondary: rgb(40, 50, 52);
   --accent: rgb(247, 247, 247);
 }
 a {
@@ -60,23 +60,32 @@ body::-webkit-scrollbar-track {
   background-color: rgb(var(--primary));
   border: rgb(var(--primary));
   color: black;
+  transition: transform 0.2s;
 }
+
 .btn-primary:hover {
   background-color: rgba(var(--primary), 0.8);
   border: rgb(var(--primary));
+  transform: scale(1.05);
 }
+
 .btn {
   font-size: larger;
 }
+
 .btn-outline-danger {
   border: 2px var(--accent) solid;
   color: white;
+  transition: transform 0.2s;
 }
+
 .btn-outline-danger:hover {
   border: 2px var(--accent) solid;
   background-color: var(--accent);
   color: black;
+  transform: scale(1.05);
 }
+
 #Name {
   font-size: clamp(2rem, 6vw, 6rem);
   transition:
